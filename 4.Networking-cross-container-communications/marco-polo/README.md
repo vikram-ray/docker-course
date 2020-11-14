@@ -24,7 +24,7 @@
 > visit http://localhost:4000/ and http://localhost:4000/connect-to-polo 
 
 ### try connecting marco to polo
-> Visit `http://localhost:3000/connect-to-polo` again marco,
+> Visit `http://localhost:3000/connect-to-polo` again from marco,
 - Response -> Hello from polo
 - indicates that marco was able to connect to polo 
 

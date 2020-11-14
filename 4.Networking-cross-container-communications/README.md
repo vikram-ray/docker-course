@@ -13,5 +13,3 @@
 > `docker nwtwork ls` to view all builtin network and create network
 - Docker Networks actually support different kinds of "Drivers" which influence the behavior of the Network.
 The default driver is the "bridge" driver - it provides the behavior shown in this module (i.e. Containers can find each other by name if they are in the same Network).
-
-> 

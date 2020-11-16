@@ -1,0 +1,62 @@
+version: "3.8"
+
+services:
+  # docker run --name mongodb -d --rm --network goals-net -e MONGO_INITDB_ROOT_USERNAME=vikram 
+  # -e MONGO_INITDB_ROOT_PASSWORD=secret -v goals-mongodb:/data/db mongo
+  mongodb:
+    image: "mongo"
+    volumes:
+      - goals-mongodb:/data/db
+    environment: 
+      MONGO_INITDB_ROOT_USERNAME: vikram
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    
+    # network is not required as node and mongo is in same compose file
+    # networks: 
+    #   - goals-net
+
+
+# docker run --name node -d --rm --env-file=./.env --network goals-net -p 3001:3000 
+# -v `pwd`/:/app -v goals_node_modules:/app/node_modules goals-node
+  node:
+    # build:
+    #   context: ./backend
+    #   dockerfile: custom-Dockerfile-name
+    #   args:
+    #     arg1: value1
+    build: ./backend
+    volumes: 
+      - ./backend/:/app
+      - /app/node_modules
+    ports: 
+      - "3001:3000"
+    env_file: 
+      - ./backend/.env
+    depends_on: 
+      - mongodb
+
+# docker run --rm -it -p 3000:3000 --name react -v `pwd`/src/:/app/src/ goals-react
+  react:
+    build: ./frontend
+    volumes: 
+      - ./frontend/src/:/app/src/
+    ports: 
+      - 3000:3000
+    env_file: 
+      - ./frontend/.env
+    tty: true
+    stdin_open: true
+    depends_on: 
+      - node
+
+
+
+# named volumes needs to declare here
+volumes: 
+  goals-mongodb:
+
+# external networks also neeed to define here
+# networks:
+#   goals-net:
+#     external: true
+

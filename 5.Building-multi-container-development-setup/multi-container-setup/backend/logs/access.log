@@ -1,0 +1,8 @@
+::ffff:172.26.0.1 - - [16/Nov/2020:14:23:18 +0000] "GET /goals HTTP/1.1" 200 12 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::ffff:172.26.0.1 - - [16/Nov/2020:14:23:23 +0000] "OPTIONS /goals HTTP/1.1" 200 13 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::ffff:172.26.0.1 - - [16/Nov/2020:14:23:24 +0000] "POST /goals HTTP/1.1" 201 77 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::ffff:172.26.0.1 - - [16/Nov/2020:14:23:27 +0000] "POST /goals HTTP/1.1" 201 77 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::ffff:172.26.0.1 - - [16/Nov/2020:14:23:29 +0000] "OPTIONS /goals/5fb28b5fc8735e001f18a810 HTTP/1.1" 200 6 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::ffff:172.26.0.1 - - [16/Nov/2020:14:23:29 +0000] "DELETE /goals/5fb28b5fc8735e001f18a810 HTTP/1.1" 200 27 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::ffff:172.27.0.1 - - [16/Nov/2020:14:35:41 +0000] "GET /goals HTTP/1.1" 200 57 "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::ffff:172.27.0.1 - - [16/Nov/2020:14:35:42 +0000] "GET /goals HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"

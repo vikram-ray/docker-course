@@ -1,5 +1,6 @@
 ### Docker utility container - an extra usecase of docker
-> run with `docker run imagename init`
+> run with eg- `docker run -it node:alpine npm init` will ask for inputs ( package name, etc) and generate a package.json file
+
 
 > The idea is to run every commands inside the container and save files in local machine
 > Eg: if we dont have node on our local machine, so we will start a container and will bind-mount our project folder with the /app inside the container. So first we create a image of node:alpine and set workdir as /app using Dockerfile

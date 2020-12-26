@@ -3,6 +3,10 @@ version: "3.8"
 services:
   server:
     image: "nginx:stable-alpine"
+    # with below change, live code will not be reflected
+    # build:
+    #   context: .
+    #   dockerfile: ./dockerfiles/nginx.dockerfile
     ports:
       - "8000:80"
     volumes:

@@ -4,6 +4,7 @@
 
 - start server: `docker-compose up -d --build server` and it will start mysql, php as they are dependency. Here `--build` is used as we must ensure that the latest changes are picked up
 
+- `docker-compose run --rm artisan migrate` - migrate db
 
 ## notes
 - we can also overwrite entrypoint, working_dir in compose file also
